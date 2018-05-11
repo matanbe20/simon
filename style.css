@@ -1,0 +1,70 @@
+.game-object {
+  display: inline-block;
+  width: 49%;
+  height: 50%;
+  opacity: 0.4;
+  cursor: pointer;
+  box-shadow: -4px 6px 16px 0px #525252;
+
+}
+.one {
+  border-top-left-radius: 100%;
+  background: red;
+}
+.two {
+  border-top-right-radius: 100%;
+  background: #0fdc0f;
+}
+.three {
+  border-bottom-left-radius: 100%;
+  background: blue;
+}
+.four {
+  border-bottom-right-radius: 100%;
+  background: yellow;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+.container {
+ 
+}
+
+show {
+  display: block
+}
+
+hide {
+  display: none
+}
+
+.container h2 {
+  font-weight: 300;
+}
+.container h1 {
+  font-weight: 300;
+  text-align: center;
+  color: #6b6a6a;
+}
+
+.start-btn{
+  text-align: center;
+  margin-top: 530px;
+  transition: 0.5s all;
+}
+
+.simon-container {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  min-width: 450px;
+  min-height: 450px;
+
+  max-width: 600px;
+  max-height: 600px;
+  transform: translate(-50%, 0);
+}
