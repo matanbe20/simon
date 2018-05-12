@@ -53,15 +53,36 @@ hide {
   transition: 0.5s all;
 }
 
+
+
 .simon-container {
   position: fixed;
   top: 120px;
   left: 50%;
   width: 70%;
   height: 70%;
-  min-width: 450px;
-  min-height: 450px;
+
   max-width: 600px;
   max-height: 600px;
   transform: translate(-50%, 0);
+}
+
+@media only screen and (max-device-width: 640px) {
+  .start-btn a{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .start-btn {
+    margin: 0;
+  }
+  .simon-container {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    transform: translate(-50%, 0);
+  }
 }
