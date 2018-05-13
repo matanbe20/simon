@@ -36,7 +36,7 @@ function simonsTurn() {
   }, 1500);
 }
 
-const startGame = () =>{
+function startGame(){
   autoPlay();
   startBtn.style.display = 'none';
 }
