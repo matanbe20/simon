@@ -36,8 +36,9 @@ function simonsTurn() {
   }, 1500);
 }
 
-function startGame() {
+const startGame = () =>{
   autoPlay();
+  startBtn.style.display = 'none';
 }
 function resetGame() {
   gameSoundArray = [];
@@ -45,7 +46,7 @@ function resetGame() {
   this.canPlay = false;
   this.score = 0;
   scoreEl.innerText = 0;
-  startBtn.classList.add('show');
+  startBtn.style.display = 'block';
 }
 
 for (let i = 0; i < gameObjects.length; i++) {
@@ -87,15 +88,15 @@ const playNotesArray = array => {
   return load(array, 750);
 };
 
-function timer(ms) {
+const timer = (ms) => {
   return new Promise(r => setTimeout(r, ms));
 }
 
-async function load(range, ms) {
-  for (let i = 0; i < range.length; i++) {
-    hadnlePlayedItems(notesMap, range[i]);
+async const load = (range, ms = 750) => {
+  range.forEach(item => {
+    hadnlePlayedItems(notesMap, item);
     await timer(ms);
-  }
+  });
   return Promise.resolve();
 }
 
