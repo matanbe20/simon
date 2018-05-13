@@ -88,7 +88,7 @@ const playNotesArray = array => {
   return load(array, 750);
 };
 
-const timer = (ms) => {
+function timer(ms){
   return new Promise(r => setTimeout(r, ms));
 }
 
