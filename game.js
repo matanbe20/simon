@@ -92,8 +92,8 @@ function timer(ms){
   return new Promise(r => setTimeout(r, ms));
 }
 
-async function load(range, ms = 750){
-  range.forEach(item => {
+async function load(range, ms){
+  range.forEach(async(item) => {
     hadnlePlayedItems(notesMap, item);
     await timer(ms);
   });
