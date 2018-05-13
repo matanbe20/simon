@@ -93,10 +93,11 @@ function timer(ms){
 }
 
 async function load(range, ms){
-  range.forEach(async(item) => {
-    hadnlePlayedItems(notesMap, item);
+  for (let i = 0; i < range.length; i++) {
+    const element = range[i];
+    hadnlePlayedItems(notesMap, element);
     await timer(ms);
-  });
+  }
   return Promise.resolve();
 }
 
